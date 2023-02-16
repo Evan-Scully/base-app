@@ -13,16 +13,16 @@ const NoPage: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="flex min-h-screen flex-col items-center justify-center">
+            <main className="flex min-h-screen flex-col items-center justify-center my-[21px]">
                 <div className="container flex flex-col md:flex-row items-center justify-between px-4 py-16 text-center w-full">
-                    <div className="w-1/2 flex flex-col self-center">
-                        <div className="w-1/2 mx-auto">
-                            <p className="text-2xl dark:text-white pb-5">404</p>
-                            <p className="text-2xl dark:text-white pb-5">You look lost radiant how did you make your way here? Return the way you came or beware the consequences</p>
-                            <a href="/" className="text-xl dark:text-white hover:text-gray-600">GO BACK</a>
+                    <div className="w-full md:w-1/2 flex flex-col self-center">
+                        <div className="w-2/3 lg:w-1/2 mx-auto">
+                            <p className="text-base md:text-2xl dark:text-white pb-5">404</p>
+                            <p className="text-base md:text-2xl dark:text-white pb-5">You look lost radiant how did you make your way here? Return the way you came or beware the consequences</p>
+                            <a href="/" className="text-sm md:text-xl dark:text-white hover:text-gray-600">GO BACK</a>
                         </div>
                     </div>
-                    <div className="w-1/2 flex self-end">
+                    <div className="md:w-1/2 mx-auto md:flex md:self-end">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 770" height={"500px"} width={"500px"} id="no-page-icon" fill="#FFF">
                             <defs>
                                 <style>{".cls-1{fill-opacity:0}"}</style>

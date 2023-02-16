@@ -22,12 +22,12 @@ const Home: NextPage = () => {
             <main className="flex min-h-screen flex-col items-center">
                 <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
                     <div className="container flex flex-col md:flex-row items-center justify-between px-4 py-16 text-center w-full">
-                        <div className="w-1/2 flex flex-col self-center">
-                            <div className="w-1/2 mx-auto">
+                        <div className="w-full md:w-1/2 flex flex-col self-center">
+                            <div className="md:w-1/2 mx-auto">
                                 <h1 className="text-3xl dark:text-white">Welcome aspiring radiant</h1>
                             </div>
                         </div>
-                        <div className="w-1/2 flex self-end">
+                        <div className="w-full md:w-1/2 mx-auto md:flex md:self-end">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 770" height={"500px"} width={"500px"} id="no-page-icon" fill="#FFF">
                                 <defs>
                                     <style>{".cls-1{fill-opacity:0}"}</style>
