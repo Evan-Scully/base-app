@@ -28,6 +28,24 @@ svg {
   fill: black;
 }
 
-.reverse-svg:hover {
-  fill: white;
+.reverse-svg path {
+    transition: fill .5s ease;
+}
+.reverse-svg:hover path {
+    fill:white;
+}
+
+.scale-up {
+  transition: all 0.5s ease-in-out;
+}
+
+.scale-up:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+@media only screen and (min-width: 768px) {
+    div:nth-child(odd) > div.alternate-row {
+    order: 2;
+    }
 }
