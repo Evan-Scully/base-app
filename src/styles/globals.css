@@ -29,10 +29,10 @@ svg {
 }
 
 .reverse-svg path {
-    transition: fill .5s ease;
+  transition: fill 0.5s ease;
 }
 .reverse-svg:hover path {
-    fill:white;
+  fill: white;
 }
 
 .scale-up {
@@ -45,7 +45,7 @@ svg {
 }
 
 @media only screen and (min-width: 768px) {
-    div:nth-child(odd) > div.alternate-row {
+  div:nth-child(odd) > div.alternate-row {
     order: 2;
-    }
+  }
 }

@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -21,17 +21,31 @@ const Home: NextPage = () => {
             <Navbar />
             <main className="flex min-h-screen flex-col items-center">
                 <div className="container flex flex-col items-center justify-center gap-12 px-4 md:py-16">
-                    <div className="container flex flex-col md:flex-row items-center justify-between px-4 py-16 w-full gap-y-12 mb-32">
-                        <div className="w-full md:w-1/2 flex flex-col self-center lg:items-end">
-                            <div className="md:w-3/4 flex flex-col gap-y-5">
-                                <h1 className="text-5xl dark:text-white font-semibold">Hi, I'm Evan</h1>
-                                <h2 className="text-2xl dark:text-gray-200 font-medium">Full-Stack Software Developer</h2>
-                                <p className="text-xl dark:text-gray-400">First Class Honours in BSc. Software Design from Technological University of the Shannon</p>
+                    <div className="container mb-32 flex w-full flex-col items-center justify-between gap-y-12 px-4 py-16 md:flex-row">
+                        <div className="flex w-full flex-col self-center md:w-1/2 lg:items-end">
+                            <div className="flex flex-col gap-y-5 md:w-3/4">
+                                <h1 className="text-5xl font-semibold dark:text-white">
+                                    Hi, I'm Evan
+                                </h1>
+                                <h2 className="text-2xl font-medium dark:text-gray-200">
+                                    Full-Stack Software Developer
+                                </h2>
+                                <p className="text-xl dark:text-gray-400">
+                                    First Class Honours in BSc. Software Design from Technological
+                                    University of the Shannon
+                                </p>
                             </div>
                         </div>
-                        <div className="w-full md:w-1/2 mx-auto md:flex md:self-end">
-                            <div className="h-full md:h-[500px] w-full md:w-[500px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 770" height={"100%"} width={"100%"} id="no-page-icon" fill="#FFF">
+                        <div className="mx-auto w-full md:flex md:w-1/2 md:self-end">
+                            <div className="h-full w-full md:h-[500px] md:w-[500px]">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 650 770"
+                                    height={"100%"}
+                                    width={"100%"}
+                                    id="no-page-icon"
+                                    fill="#FFF"
+                                >
                                     <defs>
                                         <style>{".cls-1{fill-opacity:0}"}</style>
                                     </defs>
@@ -87,14 +101,13 @@ const AuthShowcase: React.FC = () => {
 
     const { data: secretMessage } = api.example.getSecretMessage.useQuery(
         undefined, // no input
-        { enabled: sessionData?.user !== undefined },
+        { enabled: sessionData?.user !== undefined }
     );
 
     return (
         <div className="flex flex-col items-center justify-center gap-4">
             <p className="text-center text-2xl text-white">
-                {sessionData && <span>Logged in as {sessionData.user?.name}
-                </span>}
+                {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
                 {secretMessage && <span> - {secretMessage}</span>}
             </p>
             <button
@@ -112,24 +125,33 @@ type ProjectsProps = {
     image: string;
 };
 
-const ProjectShowcase = ({
-    name,
-    image,
-}: ProjectsProps) => {
-    return <>
-        <div className="container flex flex-col md:flex-row items-center justify-between w-full lg:px-24 gap-y-2">
-            <div className="w-full md:w-1/2 flex-col alternate-row flex">
-                <div className="w-full md:w-3/4 relative h-[200px] flex self-center">
-                    <Image src={image} alt="" className="w-auto h-auto" fill style={{objectFit:"contain"}}/>
+const ProjectShowcase = ({ name, image }: ProjectsProps) => {
+    return (
+        <>
+            <div className="container flex w-full flex-col items-center justify-between gap-y-2 py-4 md:flex-row lg:px-24">
+                <div className="alternate-row flex w-full flex-col md:w-1/2">
+                    <div className="relative flex h-[200px] w-full self-center md:w-3/4">
+                        <Image
+                            src={image}
+                            alt=""
+                            className="h-auto w-auto"
+                            fill
+                            style={{ objectFit: "contain" }}
+                        />
+                    </div>
+                </div>
+                <div className="flex w-full flex-col md:w-1/2">
+                    <div className="reverse-text flex w-full flex-col gap-y-4 text-center">
+                        <h1 className="text-4xl font-semibold dark:text-white">{name}</h1>
+                        <h2 className="text-xl font-medium dark:text-gray-200">
+                            This is something
+                        </h2>
+                        <p className="text-lg dark:text-gray-400">
+                            A brief description of what is in inside of the element next to it
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div className="w-full md:w-1/2 flex flex-col">
-                <div className="w-full flex flex-col gap-y-4 text-center md:text-start reverse-text">
-                    <h1 className="text-5xl dark:text-white font-semibold">{name}</h1>
-                    <h2 className="text-2xl dark:text-gray-200 font-medium">This is something</h2>
-                    <p className="text-xl dark:text-gray-400">A brief description of what is in inside of the element next to it</p>
-                </div>
-            </div>
-        </div>
-    </>;
+        </>
+    );
 };
