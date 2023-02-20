@@ -21,7 +21,7 @@ const Home: NextPage = () => {
             <Navbar />
             <main className="flex min-h-screen flex-col items-center">
                 <div className="container flex flex-col items-center justify-center gap-12 px-4 md:py-16">
-                    <div className="container mb-32 flex w-full flex-col items-center justify-between gap-y-12 px-4 py-16 md:flex-row">
+                    <div className="container md:mb-32 flex w-full flex-col items-center justify-between gap-y-12 px-4 py-16 md:flex-row">
                         <div className="flex w-full flex-col self-center md:w-1/2 lg:items-end">
                             <div className="flex flex-col gap-y-5 md:w-3/4">
                                 <h1 className="text-5xl font-semibold dark:text-white">
@@ -84,9 +84,8 @@ const Home: NextPage = () => {
                             </div>
                         </div>
                     </div>
-                    <ProjectShowcase name={"Project One"} image={"/Icons/Stamp.png"} />
-                    <ProjectShowcase name={"Project Two"} image={"/Icons/Stamp.png"} />
-                    <ProjectShowcase name={"Project Three"} image={"/Icons/Stamp.png"} />
+                    <ProjectShowcase name={"Project One"} image={"/Icons/Stamp.png"} description="A brief description"/>
+                    <ProjectShowcase name={"Final Year Project"} image={"/Icons/Stamp.png"} description="A very brief description"/>
                 </div>
             </main>
             <Footer />
@@ -123,9 +122,10 @@ const AuthShowcase: React.FC = () => {
 type ProjectsProps = {
     name: string;
     image: string;
+    description: string;
 };
 
-const ProjectShowcase = ({ name, image }: ProjectsProps) => {
+const ProjectShowcase = ({ name, image, description }: ProjectsProps) => {
     return (
         <>
             <div className="container flex w-full flex-col items-center justify-between gap-y-2 py-4 md:flex-row lg:px-24">
@@ -144,10 +144,10 @@ const ProjectShowcase = ({ name, image }: ProjectsProps) => {
                     <div className="reverse-text flex w-full flex-col gap-y-4 text-center">
                         <h1 className="text-4xl font-semibold dark:text-white">{name}</h1>
                         <h2 className="text-xl font-medium dark:text-gray-200">
-                            This is something
+                            {description}
                         </h2>
                         <p className="text-lg dark:text-gray-400">
-                            A brief description of what is in inside of the element next to it
+                            A more detailed description of what is in inside of the element next to it
                         </p>
                     </div>
                 </div>

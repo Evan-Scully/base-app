@@ -41,7 +41,7 @@ const About: NextPage = () => {
                             </h2>
                         </div>
                         <div>
-                            <h1 className="text-2xl dark:text-white">Tech Stack</h1>
+                            <h1 className="text-2xl dark:text-white mb-4">Tech Stack</h1>
                             <div className="flex flex-row flex-wrap justify-between">
                                 <div className="mx-auto">
                                     <a href="https://reactjs.org/" target="_blank">

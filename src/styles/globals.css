@@ -44,6 +44,15 @@ svg {
   transition: transform 0.5s;
 }
 
+.scale-down {
+  transition: all 0.5s ease-in-out;
+}
+
+.scale-down:hover {
+  transform: scale(0.9);
+  transition: transform 0.5s;
+}
+
 @media only screen and (min-width: 768px) {
   div:nth-child(odd) > div.alternate-row {
     order: 2;
