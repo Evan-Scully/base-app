@@ -22,6 +22,10 @@ const server = z.object({
   // Add `.min(1) on ID and SECRET if you want to make sure they're not empty
   DISCORD_CLIENT_ID: z.string(),
   DISCORD_CLIENT_SECRET: z.string(),
+  REDDIT_CLIENT_ID: z.string(),
+  REDDIT_CLIENT_SECRET: z.string(),
+  TWITTER_CLIENT_ID: z.string(),
+  TWITTER_CLIENT_SECRET: z.string(),
 });
 
 /**
@@ -45,6 +49,10 @@ const processEnv = {
   NEXTAUTH_URL: process.env.NEXTAUTH_URL,
   DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
   DISCORD_CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET,
+  REDDIT_CLIENT_ID: process.env.REDDIT_CLIENT_ID,
+  REDDIT_CLIENT_SECRET: process.env.REDDIT_CLIENT_SECRET,
+  TWITTER_CLIENT_ID: process.env.TWITTER_CLIENT_ID,
+  TWITTER_CLIENT_SECRET: process.env.TWITTER_CLIENT_SECRET,
   // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 };
 

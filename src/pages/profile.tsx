@@ -29,7 +29,7 @@ const UserProfile: NextPage = () => {
                         <div className="flex flex-col mt-64 w-full gap-y-8">
                             <Article title={"Article One"} image={"/profile/Article One.jpg"} description="A brief description" />
                             <Article title={"Article Two"} image={"/profile/Article Two.png"} description="A brief description" />
-                            <Article title={"Article One"} image={"/profile/Article One.jpg"} description="A brief description" />
+                            <Article title={"Article Three"} image={"/profile/Article One.jpg"} description="A brief description" />
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ const Article = ({ title, image, description }: ArticleProps) => {
                 <div className="relative w-full h-52 overflow-hidden">
                     <Image src={image} alt="profile-picture" fill style={{ objectFit: "cover" }} />
                 </div>
-                <div className="bg-slate-700 w-full text-white p-3 h-auto overflow-hidden">
+                <div className="bg-slate-700 w-full text-white px-5 py-2 h-auto overflow-hidden">
                     <h3 className="text-2xl text-white">
                         {title}
                     </h3>
